@@ -1,4 +1,4 @@
-It is first project, first job with such system as GIT
+﻿It is first project, first job with such system as GIT
 
 Як я виконував завдання:
 
@@ -109,3 +109,6 @@ To https://github.com/DidSV/FirstTask.git
    8b74ffc..89f2a75  master -> master
 
  Перевірив чи вони відобразились на сайті. Ніби все ОК)
+
+ Потім повернувся в консольку і командою git pull origin master  стягнув усі зміни (оцей весь текст вище). 
+ Дописав цей документ і знову запушив зміни назад

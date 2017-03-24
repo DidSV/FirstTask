@@ -1,1 +1,111 @@
 It is first project, first job with such system as GIT
+
+Як я виконував завдання:
+
+Перш за все зареєструвався на сайті github.com
+Створив там новий репозиторій, дав йому назву FirstTask
+Скачав собі на комп'ютер GIT-програму
+Далі я наводитиму строки з командного рядка з поясненнями:
+
+ Задав ім'я:
+Did@Did MINGW64 ~
+$ git config --global user.name "Did"
+
+ Задав мейл:
+Did@Did MINGW64 ~
+$ git config --global user.email did.s@i.ua
+
+ Створив новий репозиторій та ініціалізував його
+Did@Did MINGW64 ~ (master)
+$ cd Desktop/git_did/
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git init
+Initialized empty Git repository in C:/Users/Did/Desktop/git_did/.git/
+
+Створив текстовий файл в якому потім і написав ці кроки
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git add description.txt
+
+Далі я додаю цей файл в репозиторій
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git add -A
+
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Description.txt
+
+
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git commit -m "first file"
+[master (root-commit) 8b74ffc] first file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Description.txt
+
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Підв'язав локольний репозиторій до віддаленого, того що на сайті. Для цього довелось ще раз ввести свій логін і пароль. після чого зміни відіслались
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git remote add origin https://github.com/DidSV/FirstTask.git
+
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ bash: line 0: read: read error: 0: Input/output error
+error: failed to execute prompt script (exit code 1)
+fatal: could not read Username for 'https://github.com/': No error
+git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 211 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/DidSV/FirstTask.git
+ * [new branch]      master -> master
+
+ Потім я закинув у створену папку всі файли що необхідні для відображення сторінки, яку я зверстав
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git add *
+warning: LF will be replaced by CRLF in debug.log.
+The file will have its original line endings in your working directory.
+
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Description.txt
+        new file:   First.css
+        new file:   First.html
+        new file:   debug.log
+        new file:   fon.jpg
+        new file:   logo.png
+
+ Запушив зміни до віддаленого репозиторію
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git commit -m "Push html & css to the Git"
+[master 89f2a75] Push html & css to the Git
+ 6 files changed, 158 insertions(+)
+ create mode 100644 First.css
+ create mode 100644 First.html
+ create mode 100644 debug.log
+ create mode 100644 fon.jpg
+ create mode 100644 logo.png
+
+Did@Did MINGW64 ~/Desktop/git_did (master)
+$ git push origin master
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 90.84 KiB | 0 bytes/s, done.
+Total 8 (delta 0), reused 0 (delta 0)
+To https://github.com/DidSV/FirstTask.git
+   8b74ffc..89f2a75  master -> master
+
+ Перевірив чи вони відобразились на сайті. Ніби все ОК)
